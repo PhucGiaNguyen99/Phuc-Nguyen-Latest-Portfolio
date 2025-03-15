@@ -459,3 +459,100 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+/* 📌 About Section */
+.about-section {
+    background: white;
+    padding: 60px 10%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* 📌 Title */
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 📌 Intro Text */
+.intro-text {
+    font-size: 18px;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* 📌 Highlight Text */
+.highlight-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* 📌 General About Text */
+.about-text {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 📌 Fun Fact */
+.fun-fact {
+    background: #f7f9fc;
+    padding: 15px;
+    border-left: 5px solid #1abc9c;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.fun-fact h3 {
+    font-size: 20px;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+/* 📌 Quote Section */
+.quote-section {
+    background: #ecf0f1;
+    padding: 15px;
+    border-left: 5px solid #e67e22;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.quote-section h3 {
+    font-size: 20px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.quote-section blockquote {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.quote-section span {
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* 📌 Connect Text */
+.connect-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 20px;
+}
