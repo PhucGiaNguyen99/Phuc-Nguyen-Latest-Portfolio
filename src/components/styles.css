@@ -190,12 +190,50 @@ nav ul li a:hover {
     cursor: pointer;
   }
   
-  footer {
+/* 📌 Fixed Footer at Bottom */
+footer {
     background: #2c3e50;
     color: white;
     padding: 15px;
-    margin-top: 40px;
-  }
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}
+
+/* 📌 Flexbox Layout for Footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center;
+    max-width: 1100px; /* Prevents stretching */
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* 📌 Footer Links Styling */
+.footer-links a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f1c40f;
+}
+
+/* 📌 Responsive: Stack Footer on Small Screens */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
 
   /* General Styles */
 body {
@@ -307,10 +345,13 @@ body {
 }
 
 /* 📌 Contact Form */
-.contact-container {
+.contact-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack info & form vertically */
+    align-items: center; /* Center items */
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
 }
 
 /* 📌 Form Styling */

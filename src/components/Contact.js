@@ -35,7 +35,7 @@ const Contact = () => {
       <h2 className="section-title">Get in Touch</h2>
       <p className="section-description">Have a question or want to collaborate? Send me a message!</p>
 
-      <div className="contact-container">
+      <div className="contact-wrapper">
       
       {/* 📌 Contact Info Cards */}
       <div className="contact-info">
