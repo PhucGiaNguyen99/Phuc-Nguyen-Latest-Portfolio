@@ -8,7 +8,6 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    // Reset status when user starts typing
     if (status) setStatus(null);
   };
 
@@ -37,12 +36,29 @@ const Contact = () => {
       <p className="section-description">Have a question or want to collaborate? Send me a message!</p>
 
       <div className="contact-container">
-        <div className="contact-info">
-          <p><i className="fas fa-envelope"></i> Email: <a href="mailto:phucgianguyen0199@gmail.com">phucgianguyen0199@gmail.com</a></p>
-          <p><i className="fab fa-github"></i> GitHub: <a href="https://github.com/PhucGiaNguyen99" target="_blank" rel="noopener noreferrer">PhucGiaNguyen99</a></p>
-          <p><i className="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/phucgnguyen/" target="_blank" rel="noopener noreferrer">phucgnguyen</a></p>
+      
+      {/* 📌 Contact Info Cards */}
+      <div className="contact-info">
+          <div className="contact-card">
+            <i className="fas fa-envelope contact-icon"></i>
+            <h4>Email</h4>
+            <p><a href="mailto:phucgianguyen0199@gmail.com">phucgianguyen0199@gmail.com</a></p>
+          </div>
+
+          <div className="contact-card">
+            <i className="fab fa-github contact-icon"></i>
+            <h4>GitHub</h4>
+            <p><a href="https://github.com/PhucGiaNguyen99" target="_blank" rel="noopener noreferrer">PhucGiaNguyen99</a></p>
+          </div>
+
+          <div className="contact-card">
+            <i className="fab fa-linkedin contact-icon"></i>
+            <h4>LinkedIn</h4>
+            <p><a href="https://www.linkedin.com/in/phucgnguyen/" target="_blank" rel="noopener noreferrer">phucgnguyen</a></p>
+          </div>
         </div>
 
+        {/* 📌 Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="input-group">
             <input type="text" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
@@ -57,8 +73,8 @@ const Contact = () => {
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
 
-          {status === "success" && <p className="success-message">Message sent successfully!</p>}
-          {status === "error" && <p className="error-message">Failed to send message. Try again.</p>}
+          {status === "success" && <p className="success-message">✔️ Message sent successfully!</p>}
+          {status === "error" && <p className="error-message">❌ Failed to send message. Try again.</p>}
         </form>
       </div>
     </section>

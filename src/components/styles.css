@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@700&family=Playfair+Display:wght@700&display=swap');
+
 /* General Styles */
 body {
     background-color: #f8f9fa;
@@ -5,24 +8,163 @@ body {
     text-align: center;
   }
   
-  header {
-    background: #2c3e50;
+/* 📌 Header */
+header {
+    background: linear-gradient(to right, #2c3e50, #34495e);
     color: white;
-    padding: 20px 0;
-  }
-  
-  nav ul {
+    padding: 10px 20px; /* Smaller padding */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Header Container */
+.header-container {
+    display: flex;
+    align-items: center; /* Ensures elements are vertically aligned */
+    justify-content: space-between; /* Keeps items spread across */
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* 📌 Profile Section: Image & Name in the Same Row */
+.profile-section {
+    display: flex;
+    align-items: center; /* Aligns the text and image */
+    gap: 10px; /* Adds spacing between image and text */
+}
+
+/* 📌 Profile Image */
+.profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px; /* Keeps it square */
+    border: 2px solid white;
+}
+
+/* 📌 Name & Title */
+.name-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align text vertically */
+}
+
+/* 📌 Name (Phuc Nguyen) Styling */
+h1 {
+    font-family: "Montserrat", sans-serif; /* Change font */
+    font-size: 24px; /* Slightly larger for impact */
+    font-weight: 700; /* Extra bold */
+    letter-spacing: 2px; /* Adds spacing for a premium look */
+    text-transform: uppercase; /* Makes it all caps */
+    color: #f8f9fa; /* Lighter text for contrast */
+    margin: 0;
+    line-height: 60px; /* Matches profile image height */
+    transition: color 0.3s ease-in-out;
+}
+
+/* 📌 Hover Effect */
+h1:hover {
+    color: #1abc9c; /* Changes color on hover */
+}
+
+/* 📌 Subtitle */
+.subtitle {
+    font-size: 14px;
+    color: #ddd;
+    margin: 0;
+}
+
+/* 📌 Navigation */
+nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 20px;
-  }
-  
-  nav ul li a {
+    padding: 0;
+}
+
+nav ul li a {
     color: white;
+    font-size: 16px;
     text-decoration: none;
-    font-size: 18px;
-  }
+    padding: 6px 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+}
+
+/* 📌 Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1abc9c;
+}
+
+/* 📌 Call-to-Action Buttons */
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* 📌 Responsive: Adjust header for smaller screens */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-section {
+        flex-direction: column; /* Stack image & text vertically */
+        align-items: center;
+    }
+
+    h1 {
+        line-height: normal;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header-cta {
+        flex-direction: column;
+    }
+}
+
+
   
   .content-section {
     padding: 60px 10%;
@@ -87,73 +229,131 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Contact Info */
+  .contact-section {
+    background: white;
+    padding: 60px 10%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  
   .contact-info {
+    display: flex;
+    justify-content: center; /* Centering cards */
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap; /* Makes it responsive */
     margin-bottom: 30px;
-    text-align: left;
-  }
-  
-  .contact-info p {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
-  .contact-info i {
+    max-width: 900px; /* Prevents cards from stretching too wide */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+/* 📌 Individual Contact Cards */
+.contact-card {
+    background: white;
+    padding: 20px;
+    width: 250px; /* Fixed width for consistency */
+    min-height: 150px; /* Ensures cards are uniform */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Contact Icons */
+.contact-icon {
+    font-size: 30px;
     color: #007bff;
-    margin-right: 10px;
-  }
-  
-  /* Contact Form */
-  .contact-container {
+    margin-bottom: 10px;
+}
+
+/* 📌 Contact Titles */
+.contact-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+/* 📌 Contact Links & Content */
+.contact-card p, 
+.contact-card a {
+    color: #666;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #007bff;
+}
+
+/* 📌 Responsive: Stack Cards on Smaller Screens */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Stacks cards on small screens */
+        align-items: center;
+    }
+}
+
+/* 📌 Contact Form */
+.contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  
-  .contact-form {
+}
+
+/* 📌 Form Styling */
+.contact-form {
     width: 100%;
+    max-width: 400px;
     background: white;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .input-group {
-    margin-bottom: 15px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+/* 📌 Input Fields */
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     transition: all 0.3s;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-  }
-  
-  .contact-form textarea {
-    height: 120px;
-    resize: none;
-  }
-  
-  .contact-btn {
+}
+
+/* 📌 Button */
+.contact-btn {
     width: 100%;
     background: #007bff;
     color: white;
@@ -163,26 +363,58 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  .contact-btn:hover {
+}
+
+.contact-btn:hover {
     background: #0056b3;
-  }
-  
-  /* Success & Error Messages */
-  .success-message,
-  .error-message {
+}
+
+/* 📌 Success & Error Messages */
+.success-message,
+.error-message {
     margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
-  }
-  
-  .success-message {
+}
+
+.success-message {
     color: #28a745;
-  }
-  
-  .error-message {
+}
+
+.error-message {
     color: #dc3545;
-  }
+}
   
-  
+/* 📌 Vertical Divider */
+.vertical-divider {
+    width: 2px;
+    height: 50px; /* Adjust height as needed */
+    background: rgba(255, 255, 255, 0.6);
+    margin: 0 20px; /* Add spacing between sections */
+}
+
+/* 📌 Ensure the header sections align properly */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* 📌 Ensures both sections align properly */
+.profile-section,
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 📌 Adjust button container */
+.header-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
