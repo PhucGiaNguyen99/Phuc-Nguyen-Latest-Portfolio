@@ -5,7 +5,12 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState(null);
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    // Reset status when user starts typing
+    if (status) setStatus(null);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
