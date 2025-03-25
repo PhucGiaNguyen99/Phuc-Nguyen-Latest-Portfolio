@@ -556,3 +556,143 @@ body {
     color: #007bff;
     margin-top: 20px;
 }
+
+
+/* 📌 Experience Section */
+.experience-section {
+    background: white;
+    padding: 50px 10%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+/* 📌 Section Title */
+.experience-section .section-title {
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 📌 Individual Experience Card */
+.experience-card {
+    background: #f7f9fc;
+    padding: 20px;
+    border-left: 5px solid #1abc9c;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 📌 Company Name */
+.company {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* 📌 List Styling */
+.experience-card ul {
+    padding-left: 20px;
+}
+
+.experience-card li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* 📌 Responsive */
+@media screen and (max-width: 768px) {
+    .experience-section {
+        padding: 40px 5%;
+    }
+}
+
+/* 📌 Header Navigation - Adjust for Experience */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 6px 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.project-card {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.project-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.project-features li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.project-links a {
+    margin-right: 15px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}

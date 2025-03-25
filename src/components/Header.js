@@ -22,6 +22,7 @@ const Header = () => {
         <nav>
           <ul>
             <li><Link to="/">About</Link></li>
+            <li><Link to="/experience">Experience</Link></li>
             <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
@@ -37,7 +38,7 @@ const Header = () => {
               <i className="fab fa-linkedin"></i>
             </a>
           </div>
-          <a href="/Phuc_Nguyen_Resume_ProductionProgrammer_DataLabUSA.docx.pdf" className="btn" download>Download Resume</a>
+          <a href="/Phuc_Nguyen_Resume_March.docx.pdf" className="btn" download>Download Resume</a>
         </div>
       </div>
     </header>
