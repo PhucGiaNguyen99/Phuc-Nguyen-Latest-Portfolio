@@ -4,47 +4,72 @@ import "./styles.css";
 const About = () => {
   return (
     <section className="about-section">
-      <h2 className="section-title">Hi Everyone! 😊👋</h2>
+      <h2 className="section-title">Hi Everyone! 👋</h2>
 
       <p className="intro-text">
-        I’m a **Computer Science senior** at **George Mason University**, passionate about building **software solutions** that drive impact.  
-        Currently seeking **entry-level opportunities** in **software development, mobile development, web development, or data analysis**.  
+        I’m a <strong>Computer Science senior</strong> at <strong>George Mason University</strong> with a passion for building <strong>Android apps</strong> and <strong>full-stack web applications</strong>.  
+        I love turning real-world problems into clean, user-friendly software — whether it’s a mobile app or a scalable backend.
       </p>
 
-      <p className="highlight-text">
-        💻 **Specializing in:** Backend Development | API Design | Data Processing  
-        🚀 **Core Focus:** Performance | Scalability | System Efficiency  
-      </p>
+      {/* 📌 Skills Section */}
+      <div className="skills-grid">
+        <div className="skill-card">
+          💻 <strong>Backend</strong><br />
+          Node.js, Express, NestJS, Koa, MongoDB, SQLite
+        </div>
+        <div className="skill-card">
+          🌐 <strong>Frontend</strong><br />
+          React, Material UI, Responsive Design
+        </div>
+        <div className="skill-card">
+          📱 <strong>Android</strong><br />
+          Java, Android SDK, CameraX, ML Kit, Retrofit
+        </div>
+        <div className="skill-card">
+          🧪 <strong>Testing & Tools</strong><br />
+          Jest, Supertest, Docker, Git, VS Code
+        </div>
+      </div>
 
       <p className="about-text">
-        I thrive on **solving complex problems**, **optimizing workflows**, and **building robust web & mobile applications**.  
-        Passionate about **clean code, scalable solutions, and data-driven development**, I’m always exploring **new technologies & best practices**  
-        to **create high-impact software**. 👨‍💻  
+        I’ve worked on event platforms, food scanner apps, and workout trackers — sharpening my skills in <strong>API development</strong>, <strong>mobile UI</strong>, and <strong>data processing</strong>.  
+        I focus on writing clean, reliable code that’s easy to maintain and fun to use.
       </p>
 
+      {/* 📌 Job Seeking */}
+      <div className="job-card">
+        🚀 <strong>Actively seeking an entry-level opportunity</strong> in:
+        <ul>
+          <li>✅ Software Engineering</li>
+          <li>✅ Web & Mobile Development</li>
+          <li>✅ Data Analysis</li>
+        </ul>
+        <p className="job-note">Let’s build something impactful together.</p>
+      </div>
+
+      {/* 📌 Fun Fact */}
       <div className="fun-fact">
         <h3>🎲 Fun Fact About Me!</h3>
         <p>
-          I’m a **big fan of board games** – whether it's **collecting birds in Wingspan**,  
-          **gems in Splendor**, **building roads & cities in Carcassonne**, **expanding empires in Catan**,  
-          or **strategizing in Go**, I’m always up for a game! **Challenge me anytime!** 😊😊  
+          I’m a huge fan of board games — whether it's Wingspan, Splendor, Catan, or Go, I’m always down for a match.  
+          Challenge me anytime! 😄
         </p>
       </div>
 
+      {/* 📌 Favorite Quote */}
       <div className="quote-section">
         <h3>✨ A Quote I Live By:</h3>
         <blockquote>
-          "Live as if you were to die tomorrow. Learn as if you were to live forever."  
+          "Live as if you were to die tomorrow. Learn as if you were to live forever."
           <span>— Mahatma Gandhi</span>
         </blockquote>
         <p>
-          There's something about this quote that just **resonates with me**.  
-          I believe in **giving my best in everything I do** while **staying curious & learning along the way**.  
+          I believe in giving my best every day while staying curious and continuously learning.
         </p>
       </div>
 
       <p className="connect-text">
-        Let’s **connect, swap ideas, and create something awesome together!** 🚀🚀  
+        Let’s connect, swap ideas, and create something awesome together! 🚀
       </p>
     </section>
   );
