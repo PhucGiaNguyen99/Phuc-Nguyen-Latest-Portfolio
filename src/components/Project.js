@@ -6,21 +6,22 @@ const Projects = () => {
     <section className="content-section" id="projects">
       <h2 className="section-title">🚀 Projects</h2>
 
-      {/* === Project: Gather Mason === */}
+      {/* === Project: Gather Mason === */} 
       <div className="project-card">
         <div className="project-header">
-          <h3 className="project-title">🎓 Gather Mason</h3>
+          <h3 className="project-title">Gather Mason</h3>
           <p className="project-description">
-            A full-stack event management platform for students to create, browse, and join campus events.
+            Gather Mason is a production-ready full-stack web application designed to help students create, browse, and join campus events efficiently. The platform provides seamless event discovery, user authentication, and participation management, all built with a focus on usability and real-time interaction.
           </p>
         </div>
         <div className="project-body">
           <ul className="project-features">
-            <li>🔐 JWT Authentication & Role-Based Access</li>
-            <li>📅 Full CRUD for events with personalized dashboard</li>
-            <li>📧 Automated event reminders using AWS Lambda & Nodemailer</li>
-            <li>🔍 Dynamic search and filtering (title, location, date)</li>
-            <li>⚛️ Built with React, Node.js, Express, and MongoDB</li>
+            <li>Secure JWT-based authentication with role-based access control</li>
+            <li>Full CRUD functionality for events and user dashboards</li>
+            <li>Automated email reminders for upcoming events using AWS Lambda, EventBridge, and Nodemailer</li>
+            <li>Search and filter events by title, location, and date</li>
+            <li>Deployed with HTTPS: Backend on Render, Frontend on Vercel</li>
+            <li>Tech stack: React, Node.js, Express, MongoDB</li>
           </ul>
           <div className="project-links">
             <a
@@ -30,9 +31,18 @@ const Projects = () => {
             >
               GitHub
             </a>
+            <a
+              href="https://gather-mason.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: "1rem" }}
+            >
+              Live Demo
+            </a>
           </div>
         </div>
       </div>
+
 
       {/* === Project: Food Ingredient Scanner === */}
       <div className="project-card">
