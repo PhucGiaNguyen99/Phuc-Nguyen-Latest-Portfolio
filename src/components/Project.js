@@ -11,17 +11,29 @@ const Projects = () => {
         <div className="project-header">
           <h3 className="project-title">Gather Mason</h3>
           <p className="project-description">
-            Gather Mason is a production-ready full-stack web application designed to help students create, browse, and join campus events efficiently. The platform provides seamless event discovery, user authentication, and participation management, all built with a focus on usability and real-time interaction.
+            Gather Mason is a production-ready full-stack web application designed to help students create, browse, and join campus events efficiently. The platform offers secure user authentication, dynamic event participation management, and automated reminders, with real-time interactions and a scalable architecture built for deployment.
           </p>
         </div>
         <div className="project-body">
           <ul className="project-features">
-            <li>Secure JWT-based authentication with role-based access control</li>
-            <li>Full CRUD functionality for events and user dashboards</li>
-            <li>Automated email reminders for upcoming events using AWS Lambda, EventBridge, and Nodemailer</li>
-            <li>Search and filter events by title, location, and date</li>
-            <li>Deployed with HTTPS: Backend on Render, Frontend on Vercel</li>
-            <li>Tech stack: React, Node.js, Express, MongoDB</li>
+            <li>
+              <strong>Secure Authentication and Role-Based Access:</strong> Implemented robust JWT authentication and authorization, ensuring only authorized users can create, update, or delete events. Role-based permissions protect event data integrity and enhance application security.
+            </li>
+            <li>
+              <strong>Comprehensive Event Management System:</strong> Developed full CRUD functionality for events, allowing users to create, browse, update, and delete events easily. Users can track created events and joined events through a personalized dashboard with real-time updates.
+            </li>
+            <li>
+              <strong>Automated Email Notifications:</strong> Integrated AWS Lambda, EventBridge, and Nodemailer to automatically send reminder emails to participants before their events. This serverless solution increases user engagement without burdening the core backend.
+            </li>
+            <li>
+              <strong>Advanced Event Search and Filtering:</strong> Built flexible search features that allow users to find events quickly by title, location, and date. Backend APIs use optimized query logic for fast and accurate results.
+            </li>
+            <li>
+              <strong>Professional Deployment with HTTPS:</strong> Deployed the backend on Render and the frontend on Vercel, ensuring fully encrypted HTTPS communication. The frontend connects seamlessly to the backend API without any mixed content issues.
+            </li>
+            <li>
+              <strong>Tech Stack:</strong> Built with React for the frontend, Node.js and Express for the backend, and MongoDB for persistent database storage.
+            </li>
           </ul>
           <div className="project-links">
             <a
