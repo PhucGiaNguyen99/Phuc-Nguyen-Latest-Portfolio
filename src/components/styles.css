@@ -8,11 +8,11 @@ body {
     text-align: center;
   }
   
-/* 📌 Header */
+/* Header */
 header {
-    background: linear-gradient(to right, #2c3e50, #34495e);
+    background: linear-gradient(to right, #9CAF88, #7A9E7E); /* Change from dark blue to matcha color*/ 
     color: white;
-    padding: 10px 20px; /* Smaller padding */
+    padding: 10px 20px; 
     text-align: center;
     position: sticky;
     top: 0;
@@ -21,38 +21,47 @@ header {
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 📌 Header Container */
+/* Header Container */
 .header-container {
     display: flex;
-    align-items: center; /* Ensures elements are vertically aligned */
-    justify-content: space-between; /* Keeps items spread across */
-    max-width: 900px;
-    margin: auto;
-    padding: 0 20px;
-}
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    width: 100%;              /* Full screen width */
+    padding: 0 2rem;          /* Optional: side padding */
+    box-sizing: border-box;   /* Ensure padding doesn't shrink layout */
+    flex-basis: 40%;
+  }
 
-/* 📌 Profile Section: Image & Name in the Same Row */
+/* Profile Section: Image & Name in the Same Row */
 .profile-section {
     display: flex;
-    align-items: center; /* Aligns the text and image */
-    gap: 10px; /* Adds spacing between image and text */
-}
-
-/* 📌 Profile Image */
-.profile-img {
-    width: 60px;
-    height: 60px;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: 420px;     /* Ensure enough width for line breaks to stay */
+    max-width: 500px;     /* Optional cap */
+  }
+  
+  .profile-img {
+    height: 100%;
+    max-height: 9.5rem; /* tweak this to match ~4 lines of text */
     object-fit: cover;
-    border-radius: 8px; /* Keeps it square */
-    border: 2px solid white;
-}
-
-/* 📌 Name & Title */
-.name-title {
+    border-radius: 12px;
+  }
+  .name-title {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Align text vertically */
-}
+    justify-content: center;
+    white-space: normal; /* Let text wrap naturally with <br /> */
+  }
+
+  .highlight-role {
+    color: #1B5E20; 
+  font-weight: 600;
+  }
 
 /* 📌 Name (Phuc Nguyen) Styling */
 h1 {
@@ -74,10 +83,13 @@ h1:hover {
 
 /* 📌 Subtitle */
 .subtitle {
-    font-size: 14px;
-    color: #ddd;
-    margin: 0;
-}
+    font-size: 16px;
+    color: #f0f4f0; /* light greenish-white for matcha header */
+    margin: 4px 0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  
 
 /* 📌 Navigation */
 nav ul {
@@ -233,6 +245,107 @@ footer {
     }
 }
 
+
+/* About page*/
+/* Core Section */
+.about-section {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: "Segoe UI", sans-serif;
+    color: #1f2937;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1b5e20;
+  }
+  
+  .section-subtitle {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+    color: #333;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .bible-verse {
+    font-style: italic;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid #4caf50;
+    color: #374151;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .skill-card {
+    background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #c8e6c9;
+    text-align: center;
+    transition: transform 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Job Card */
+  .job-card {
+    background-color: #f1f8e9;
+    border-left: 6px solid #689f38;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+  
+  .job-card ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .job-note {
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  
+  /* Animations */
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
 
 
   /* General Styles */
@@ -460,16 +573,6 @@ body {
     gap: 10px;
 }
 
-/* 📌 About Section */
-.about-section {
-    background: white;
-    padding: 60px 10%;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    margin: 50px auto;
-    max-width: 900px;
-    text-align: center;
-}
 
 
 /* 📌 Title */
