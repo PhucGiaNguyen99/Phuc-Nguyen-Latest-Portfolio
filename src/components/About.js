@@ -3,75 +3,44 @@ import "./styles.css";
 
 const About = () => {
   return (
-    <section className="about-section">
-      <h2 className="section-title">Hi Everyone! 👋</h2>
+    <div className="card about-intro fade-in">
+  <p>
+    <strong>Welcome to my page!</strong> I’m Phuc Nguyen, a senior studying Computer Science at <strong>George Mason University</strong>, graduating in May 2025. I’m actively seeking entry-level roles in <span className="highlight">software engineering, mobile development, or full-stack development</span> where I can contribute and grow.
+  </p>
 
-      <p className="intro-text">
-        I’m a <strong>Computer Science senior</strong> at <strong>George Mason University</strong> with a passion for building <strong>Android apps</strong> and <strong>full-stack web applications</strong>.  
-        I love turning real-world problems into clean, user-friendly software — whether it’s a mobile app or a scalable backend.
-      </p>
+  <p>I’m passionate about building real projects that matter. Here are a few that I’m proud of:</p>
+  <div className="react-showcase">
+    <div className="mini-card">
+      📷 <strong>BiteWise</strong>
+      <p>An Android barcode-scanning app using ML Kit OCR to help users track food ingredients and calorie intake.</p>
+    </div>
+    <div className="mini-card">
+      🗓 <strong>Gather Mason</strong>
+      <p>A full-stack student event platform with a React UI, MongoDB backend, and AWS Lambda-powered email reminders.</p>
+    </div>
+    <div className="mini-card">
+      💪 <strong>TrackMyReps</strong>
+      <p>A fitness tracking app built with SQLite and modern Android UI to help users log and review their workouts.</p>
+    </div>
+  </div>
 
-      {/* 📌 Skills Section */}
-      <div className="skills-grid">
-        <div className="skill-card">
-          💻 <strong>Backend</strong><br />
-          Node.js, Express, NestJS, Koa, MongoDB, SQLite
-        </div>
-        <div className="skill-card">
-          🌐 <strong>Frontend</strong><br />
-          React, Material UI, Responsive Design
-        </div>
-        <div className="skill-card">
-          📱 <strong>Android</strong><br />
-          Java, Android SDK, CameraX, ML Kit, Retrofit
-        </div>
-        <div className="skill-card">
-          🧪 <strong>Testing & Tools</strong><br />
-          Jest, Supertest, Docker, Git, VS Code
-        </div>
-      </div>
+  <p>
+    During my internship at <strong>Quokka.io</strong>, I improved backend API performance using NestJS and Koa, introduced strong validation with <code>class-validator</code>, and helped boost test coverage to 80%.
+  </p>
 
-      <p className="about-text">
-        I’ve worked on event platforms, food scanner apps, and workout trackers — sharpening my skills in <strong>API development</strong>, <strong>mobile UI</strong>, and <strong>data processing</strong>.  
-        I focus on writing clean, reliable code that’s easy to maintain and fun to use.
-      </p>
+  <p>
+    I love writing maintainable, readable code — and learning by iterating, experimenting, and improving my work bit by bit. Outside of tech, I unwind with board games like Wingspan, Splendor, Carcassonne, and Go.
+  </p>
 
-      {/* 📌 Job Seeking */}
-      <div className="job-card">
-        🚀 <strong>Actively seeking an entry-level opportunity</strong> in:
-        <ul>
-          <li>✅ Software Engineering</li>
-          <li>✅ Web & Mobile Development</li>
-          <li>✅ Data Analysis</li>
-        </ul>
-        <p className="job-note">Let’s build something impactful together.</p>
-      </div>
+  <blockquote className="bible-verse">
+    “And let us not grow weary while doing good, for in due season we shall reap if we do not lose heart.” — Galatians 6:9
+  </blockquote>
 
-      {/* 📌 Fun Fact */}
-      <div className="fun-fact">
-        <h3>🎲 Fun Fact About Me!</h3>
-        <p>
-          I’m a huge fan of board games — whether it's Wingspan, Splendor, Catan, or Go, I’m always down for a match.  
-          Challenge me anytime! 😄
-        </p>
-      </div>
+  <p className="connect-text">
+    Let’s connect — I’d love to share ideas, hear your story, and build something meaningful together!
+  </p>
+</div>
 
-      {/* 📌 Favorite Quote */}
-      <div className="quote-section">
-        <h3>✨ A Quote I Live By:</h3>
-        <blockquote>
-          "Live as if you were to die tomorrow. Learn as if you were to live forever."
-          <span>— Mahatma Gandhi</span>
-        </blockquote>
-        <p>
-          I believe in giving my best every day while staying curious and continuously learning.
-        </p>
-      </div>
-
-      <p className="connect-text">
-        Let’s connect, swap ideas, and create something awesome together! 🚀
-      </p>
-    </section>
   );
 };
 
