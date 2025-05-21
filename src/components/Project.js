@@ -4,7 +4,7 @@ import "./styles.css";
 const Projects = () => {
   return (
     <section className="content-section" id="projects">
-      <h2 className="section-title">🚀 Projects</h2>
+      <h2 className="section-title">Projects</h2>
 
       {/* === Project: Gather Mason === */} 
       <div className="project-card">
