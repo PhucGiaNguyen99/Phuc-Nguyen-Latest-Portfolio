@@ -59,7 +59,7 @@ header {
   }
 
   .highlight-role {
-    color: #1B1B1B; 
+    color: #A93226; 
   font-weight: 600;
   }
 
@@ -692,66 +692,95 @@ body {
 }
 
 
-/* 📌 Experience Section */
+/* Experience Section */
 .experience-section {
     background: white;
-    padding: 50px 10%;
+    padding: 60px 10%;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    margin: 50px auto;
-    max-width: 900px;
+    margin: 60px auto;
+    max-width: 960px;
     text-align: left;
-}
-
-/* 📌 Section Title */
-.experience-section .section-title {
+  }
+  
+  .experience-section .section-title {
     font-size: 28px;
     color: #2c3e50;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-/* 📌 Individual Experience Card */
-.experience-card {
+    margin-bottom: 40px;
+  }
+  
+  /* Card Container */
+  .experience-card {
     background: #f7f9fc;
-    padding: 20px;
+    padding: 25px;
     border-left: 5px solid #1abc9c;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.experience-card:hover {
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-}
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .experience-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #9CAF88, #6F8D75);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+  }
 
-/* 📌 Company Name */
-.company {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
+  .name-highlight::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60px;
+    background: #C8FFD4;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+  .company {
+    font-size: 15px;
     font-style: italic;
-}
-
-/* 📌 List Styling */
-.experience-card ul {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .experience-list {
     padding-left: 20px;
-}
-
-.experience-card li {
+  }
+  
+  .experience-list li {
     font-size: 16px;
-    color: #444;
-    margin-bottom: 8px;
-}
-
-/* 📌 Responsive */
-@media screen and (max-width: 768px) {
-    .experience-section {
-        padding: 40px 5%;
-    }
-}
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Animation */
+  .fade-in {
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
 
 /* 📌 Header Navigation - Adjust for Experience */
 nav ul {
